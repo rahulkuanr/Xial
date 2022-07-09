@@ -5,6 +5,11 @@ const expressLayouts = require('express-ejs-layouts');
 const app = express();
 
 app.use(expressLayouts);
+
+// extract styles and scripts from sub pages into the layout
+app.set('layout extractStyles', true);
+app.set('layout extractScripts', true);
+
 app.use(express.static('./assets'));
 
 //using express router to route
