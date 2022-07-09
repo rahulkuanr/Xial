@@ -4,6 +4,9 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const expressLayouts = require('express-ejs-layouts');
 const db = require('./config/mongoose');
+const session = require('express-session');
+const passport = require('passport');
+const passportLocal = require('./config/passport-local-statergy.js');
 
 const app = express();
 
@@ -18,12 +21,26 @@ app.set('layout extractScripts', true);
 
 app.use(express.static('./assets'));
 
-//using express router to route
-app.use('/', require('./routes'));
-
 // setup the view engine
 app.set('view engine', 'ejs');
 app.set('views', './views');
+
+app.use(session({
+    name: 'xial',
+    //todo change the secret before deployment to production
+    secret: 'blahsomething',
+    saveUninitialized: false,
+    resave: false,
+    cookie: {
+        maxAge: (1000 * 60 * 100)
+    }
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+//using express router to route
+app.use('/', require('./routes'));
 
 app.listen(port, (error) => {
     if(error){

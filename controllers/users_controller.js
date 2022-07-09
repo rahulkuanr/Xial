@@ -50,5 +50,5 @@ module.exports.create = (request, response) => {
 
 //sign in and create session for the user
 module.exports.createSession = (request, response) => {
-  //todo later
+  return response.redirect('/');
 };
