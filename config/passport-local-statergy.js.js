@@ -52,8 +52,8 @@ passport.checkAuthentication = (request, response, next) => {
     }
 
     // if user is not signed in
-    return response.redirect('users/sign-in');
-};
+    return response.redirect('/users/sign-in');
+}
 
 passport.setAuthenticatedUser = (request, resposne, next) => {
     if(request.isAuthenticated()) {
