@@ -62,3 +62,17 @@ module.exports.create = (request, response) => {
 module.exports.createSession = (request, response) => {
   return response.redirect('/');
 };
+
+
+//sign out and destroy session for user
+module.exports.destroySession = (request, response) => {
+  request.logout(
+    (error) => {
+      if(error) {
+        console.log('Error logging out');
+        return;
+      }
+    }
+  );
+  return response.redirect('/');
+};
