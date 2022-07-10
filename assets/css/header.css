@@ -1,0 +1,35 @@
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #4267b2;
+}
+
+header #brand {
+  width: 90%;
+  padding: 10px 0 0 20px;
+}
+
+header #brand a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5em;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-around;
+  width: 10%;
+  padding: 0 20px 0 20px;
+}
+
+header ul li {
+  list-style: none;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+}
