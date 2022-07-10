@@ -6,4 +6,19 @@
         <textarea name="content" cols="70" rows="3" placeholder="What's on your mind?"></textarea>
         <button type="submit">Post</button>
     </form>
+    <div id="post-list-container">
+        <ul>
+            <% for(post of posts) { %>
+                <p>
+                    <li>
+                        <%= post.content %>
+                            <br>
+                            <small>
+                                <%= post.user.name %>
+                            </small>
+                    </li>
+                </p>
+                <% } %>
+        </ul>
+    </div>
 </section>
