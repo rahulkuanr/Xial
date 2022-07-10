@@ -9,6 +9,11 @@ module.exports.profile = (request, response) => {
 
 // render the signup page
 module.exports.signUp = (request, response) => {
+  //redirect to profile page if user is already signed in and tries to signup again
+  if(request.isAuthenticated()) {
+    return response.redirect("/users/profile");
+  }
+
   return response.render("user_sign_up", {
     title: "Xial | Sign Up",
   });
@@ -16,6 +21,11 @@ module.exports.signUp = (request, response) => {
 
 // render the sign in page
 module.exports.signIn = (request, response) => {
+  //redirect to profile page if user is already signed in and tries to signin again
+  if(request.isAuthenticated()) {
+    return response.redirect("/users/profile");
+  }
+
   return response.render("user_sign_in", {
     title: "Xial | Sign In",
   });
