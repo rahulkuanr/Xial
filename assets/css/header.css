@@ -3,6 +3,9 @@ header {
   display: flex;
   justify-content: space-between;
   background-color: #2374e1;
+  position: fixed;
+  top: 0;
+  z-index: 999;
 }
 
 header #brand {
@@ -14,7 +17,7 @@ header #brand a {
   text-decoration: none;
   color: white;
   font-size: 1.5em;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 header ul {

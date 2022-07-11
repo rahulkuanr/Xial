@@ -57,4 +57,14 @@ section {
             }
         }
     }
+
+    #post-list-container {
+        margin: auto;
+        width: 50%;
+
+        ul {
+            margin: auto;
+            width: inherit;
+        }
+    }
 }

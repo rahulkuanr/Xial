@@ -57,3 +57,13 @@ section #post-form-container #new-post-form #postContent::placeholder {
   color: white;
   opacity: 0.8;
 }
+
+section #post-list-container {
+  margin: auto;
+  width: 50%;
+}
+
+section #post-list-container ul {
+  margin: auto;
+  width: inherit;
+}
