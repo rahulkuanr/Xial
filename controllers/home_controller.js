@@ -19,6 +19,7 @@ module.exports.home = (request, response) => {
             path: 'user'
         }
     })
+    .sort('-updatedAt')
     .exec((error, posts) => {
         return response.render('home', {
             title: "Xial | Home",
