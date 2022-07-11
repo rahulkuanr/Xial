@@ -1,0 +1,59 @@
+section #post-form-container {
+  width: 50%;
+  margin: auto;
+  background-color: #303030;
+  height: 80px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+section #post-form-container #new-post-form {
+  margin: auto;
+  padding-top: 12px;
+  width: fit-content;
+  display: flex;
+  justify-content: space-around;
+}
+
+section #post-form-container #new-post-form #postContent {
+  resize: none;
+  border-radius: 4px;
+  background-color: #4d4d4d;
+  color: white;
+  outline: none;
+  border: none;
+}
+
+section #post-form-container #new-post-form #postContent:hover {
+  background-color: #444444;
+}
+
+section #post-form-container #new-post-form #post-button {
+  height: 40px;
+  margin: 5px 0 0 5px;
+  background-color: #2374e1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+section #post-form-container #new-post-form #post-button:disabled {
+  background-color: #898f9c;
+  color: #b1b0b0;
+}
+
+section #post-form-container #new-post-form #post-button:disabled:hover {
+  background-color: #898f9c;
+  color: #b1b0b0;
+  cursor: not-allowed;
+}
+
+section #post-form-container #new-post-form #post-button:hover {
+  background-color: #3d91ff;
+  cursor: pointer;
+}
+
+section #post-form-container #new-post-form #postContent::placeholder {
+  color: white;
+  opacity: 0.8;
+}

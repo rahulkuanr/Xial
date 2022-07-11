@@ -1,12 +1,12 @@
-<h1>Xial is here.</h1>
-
+<link rel="stylesheet" href="/css/home.css">
 <section id="feed-posts">
-    <h4>Posts</h4>
     <% if(locals.user) { %>
-        <form action="/posts/create" id="new-post-form" method="POST">
-            <textarea name="content" cols="70" rows="3" placeholder="What's on your mind?" required></textarea>
-            <button type="submit">Post</button>
-        </form>
+        <div id="post-form-container">
+            <form action="/posts/create" id="new-post-form" method="POST">
+                <textarea name="content" id="postContent" cols="70" rows="3" onkeyup="EnableDisable(this)" placeholder="What's on your mind, <%= user.name%>?" required></textarea>
+                <button type="submit" id="post-button" disabled>Share</button>
+            </form>
+        </div>
         <% } %>
         <div id="post-list-container">
             <ul>
@@ -47,3 +47,4 @@
             </ul>
         </div>
 </section>
+<script src="/js/home.js"></script>
