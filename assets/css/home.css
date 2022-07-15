@@ -92,6 +92,15 @@ section #post-list-container ul li {
   margin-bottom: 5px;
 }
 
+section #post-list-container ul li #delete-post {
+  float: right;
+}
+
+section #post-list-container ul li #delete-post a {
+  text-decoration: none;
+  color: white;
+}
+
 section #post-list-container ul li hr {
   border-color: #9e9e9e;
   background-color: #9e9e9e;
@@ -110,6 +119,17 @@ section #post-list-container ul li .post-comments .post-comments-list ul #commen
 
 section #post-list-container ul li .post-comments .post-comments-list ul #comments-list p {
   display: inline;
+}
+
+section #post-list-container ul li .post-comments .post-comments-list ul #comments-list #delete-comment {
+  float: right;
+  padding-right: 10px;
+  padding-top: 2px;
+}
+
+section #post-list-container ul li .post-comments .post-comments-list ul #comments-list #delete-comment a {
+  text-decoration: none;
+  color: white;
 }
 
 section #post-list-container ul li .post-comments form #comment-input {

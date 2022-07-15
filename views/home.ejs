@@ -20,8 +20,8 @@
                             </p>
                             <%= post.content %>
                             <% if(locals.user && locals.user.id == post.user.id) {%>
-                                <small>
-                                    <a href="/posts/destroy/<%= post.id %>">Delete</a>
+                                <small id="delete-post">
+                                    <a href="/posts/destroy/<%= post.id %>">Delete Post</a>
                                 </small>
                             <% } %>
                             <hr>
@@ -41,6 +41,11 @@
                                                     <%= comment.user.name %>: 
                                                 </p>
                                                 <%= comment.content %>
+                                                <% if(locals.user && locals.user.id == comment.user.id) {%>
+                                                    <small id="delete-comment">
+                                                        <a href="/comments/destroy/<%= comment.id %>">Delete</a>
+                                                    </small>
+                                                <% } %>
                                             </div>        
                                         <% } %>
                                     </ul>
