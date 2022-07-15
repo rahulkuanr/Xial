@@ -14,45 +14,8 @@
                 <h2 id="feed">Newsfeed</h2>
                 <ul>
                     <% for(post of posts) { %>
-                        <li>
-                            <p class="user">
-                                <%= post.user.name %>
-                            </p>
-                            <%= post.content %>
-                            <% if(locals.user && locals.user.id == post.user.id) {%>
-                                <small id="delete-post">
-                                    <a href="/posts/destroy/<%= post.id %>">Delete Post</a>
-                                </small>
-                            <% } %>
-                            <hr>
-                            <div class="post-comments">
-                                <% if(locals.user) { %>
-                                    <form action="/comments/create" method="POST">
-                                        <input id="comment-input" type="text" name="content" placeholder="Write a comment...."
-                                            required>
-                                        <input type="hidden" name="post" value="<%= post._id %>">
-                                    </form>
-                                <% } %>
-                                <div class="post-comments-list">
-                                    <ul id="post-comments-<%= post._id %>%">
-                                        <% for (comment of post.comments) { %>
-                                            <div id="comments-list">
-                                                <p class="userComments">
-                                                    <%= comment.user.name %>: 
-                                                </p>
-                                                <%= comment.content %>
-                                                <% if(locals.user && locals.user.id == comment.user.id) {%>
-                                                    <small id="delete-comment">
-                                                        <a href="/comments/destroy/<%= comment.id %>">Delete</a>
-                                                    </small>
-                                                <% } %>
-                                            </div>        
-                                        <% } %>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <% } %>
+                        <%- include('_post') -%>
+                    <% } %>
                 </ul>
             </div>
 </section>
