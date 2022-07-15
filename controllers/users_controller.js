@@ -10,6 +10,17 @@ module.exports.profile = (request, response) => {
   });
 };
 
+//update user profile
+module.exports.update = (request, response) => {
+  if(request.user.id == request.params.id) {
+    User.findByIdAndUpdate(request.params.id, request.body, (error, user) => {
+      return response.redirect('back');
+    });
+  } else {
+    return response.status(401).send('Unauthorized');
+  }
+}
+
 // render the signup page
 module.exports.signUp = (request, response) => {
   //redirect to profile page if user is already signed in and tries to signup again

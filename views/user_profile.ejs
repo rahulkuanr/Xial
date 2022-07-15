@@ -8,3 +8,17 @@
       <p><%= profile_user.email %></p> 
     </div>
   </div>
+
+  <% if(user.id==profile_user.id) { %>
+    <div id="edit-button">
+      <button id="showFormButton" onclick="showEditForm()">Edit Profile</button>
+    </div>
+    <div id="edit-form">
+      <form action="/users/update/<%= profile_user.id %>" method="POST">
+        <input type="text" name="name" placeholder="Your Name" value="<%= profile_user.name %>" required>
+        <input type="email" name="email" placeholder="Your Email" value="<%= profile_user.email %>" required>
+        <button onclick="hideEditForm()" type="submit">Update</button>
+      </form>
+    </div>
+  <% } %>
+  <script src="/js/user_profile.js"></script>

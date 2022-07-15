@@ -17,3 +17,21 @@ body .card .container {
 body .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
+
+body #edit-button {
+  width: fit-content;
+  margin: auto;
+  margin-top: 5px;
+}
+
+body #edit-button button {
+  background-color: #4e4d4d;
+  color: white;
+  border: none;
+}
+
+body #edit-form {
+  width: fit-content;
+  margin: auto;
+  display: none;
+}
