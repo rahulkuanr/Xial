@@ -15,6 +15,7 @@ module.exports.home = (request, response) => {
     .populate('user')
     .populate({
         path: 'comments',
+        options: { sort: { 'createdAt': -1 } },
         populate: {
             path: 'user'
         }
