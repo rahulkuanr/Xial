@@ -2,36 +2,78 @@ body {
   color: white;
 }
 
-body .card {
+body div {
+  margin: auto;
+  margin-top: 10px;
+}
+
+body div .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   width: 200px;
   margin: auto;
   background-color: #4e4d4d;
+  position: relative;
+  margin-top: 10px;
 }
 
-body .card .container {
+body div .card .container {
   padding: 2px 16px;
 }
 
-body .card:hover {
+body div .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-body #edit-button {
+body div #edit-button {
   width: fit-content;
   margin: auto;
   margin-top: 5px;
 }
 
-body #edit-button button {
+body div #edit-button button {
   background-color: #4e4d4d;
   color: white;
   border: none;
+  width: 80px;
+  height: 30px;
+  background-color: #2374e1;
 }
 
-body #edit-form {
+body div #edit-form {
   width: fit-content;
   margin: auto;
   display: none;
+}
+
+body div #edit-form form input, body div #edit-form form button {
+  display: block;
+  margin: 20px;
+  border: none;
+}
+
+body div #edit-form form input {
+  width: 200px;
+  height: 30px;
+  background-color: #4d4d4d;
+  outline: none;
+  color: white;
+  padding-left: 5px;
+}
+
+body div #edit-form form input::placeholder {
+  color: white;
+  opacity: 0.8;
+}
+
+body div #edit-form form button {
+  width: 75px;
+  height: 30px;
+  background-color: #2374e1;
+  color: white;
+}
+
+body div #edit-form form button:hover {
+  background-color: #3d91ff;
+  cursor: pointer;
 }

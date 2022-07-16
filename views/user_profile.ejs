@@ -1,9 +1,14 @@
 <link rel="stylesheet" href="/css/user_profile.css">
-<div class="card">
+<div>
+  <div class="card">
     <img src="https://www.w3schools.com/howto/img_avatar.png" alt="avatar" style="width:100%">
     <div class="container">
-      <h4><b><%= profile_user.name %></b></h4> 
-      <p><%= profile_user.email %></p> 
+      <h4><b>
+          <%= profile_user.name %>
+        </b></h4>
+      <p>
+        <%= profile_user.email %>
+      </p>
     </div>
   </div>
 
@@ -18,5 +23,6 @@
         <button onclick="hideEditForm()" type="submit">Update</button>
       </form>
     </div>
-  <% } %>
-  <script src="/js/user_profile.js"></script>
+    <% } %>
+</div>
+<script src="/js/user_profile.js"></script>
