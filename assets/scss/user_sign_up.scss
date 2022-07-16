@@ -1,0 +1,44 @@
+div {
+    margin: auto;
+    position: relative;
+    margin-top: 10px;
+
+    h1 {
+        color: #b1b3b9;
+    }
+
+    form {
+        input, button {
+            display: block;
+            margin: 20px;
+            border: none;
+        }
+
+        input {
+            width: 200px;
+            height: 30px;
+            border: none;
+            background-color: rgb(77, 77, 77);
+            outline: none;
+            color: white;
+            padding-left: 5px;
+        }
+
+        input::placeholder {
+            color: white;
+            opacity: 0.8;
+        }
+
+        button {
+            width: 75px;
+            height: 30px;
+            background-color: #2374e1;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #3d91ff;
+            cursor: pointer;
+        }
+    }
+}
