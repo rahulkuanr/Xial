@@ -19,6 +19,7 @@ html body {
 html body #layout-main {
   height: 100%;
   margin-top: 70px;
+  display: flex;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */

@@ -1,4 +1,6 @@
-section {
+section#feed-posts {
+
+    width: 70%;
 
     #heading {
         width: 50%;
@@ -28,6 +30,7 @@ section {
                 outline: none;
                 border: none;
                 width: 90%;
+                margin-left: 5px;
             }
 
             #postContent:hover {
@@ -36,7 +39,7 @@ section {
 
             #post-button {
                 height: 40px;
-                margin: 5px 0 0 5px;
+                margin: 5px 5px 0 5px;
                 background-color: #2374e1;
                 color: white;
                 border: none;
@@ -169,6 +172,28 @@ section {
                     color: #b1b3b9;
                 }
             }
+        }
+    }
+}
+
+section#user-friends {
+    width: 30%;
+    padding-left: 10px;
+    height: 100vh;
+    color: #b1b3b9;
+
+    h4{
+        font-size: larger;
+        margin: 5px;
+    }
+
+    p {
+        margin: 10px;
+        font-size: small;
+        
+        a{
+            text-decoration: none;
+            color: white;
         }
     }
 }

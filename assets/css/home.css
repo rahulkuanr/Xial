@@ -1,10 +1,14 @@
-section #heading {
+section#feed-posts {
+  width: 70%;
+}
+
+section#feed-posts #heading {
   width: 50%;
   margin: auto;
   color: #b1b3b9;
 }
 
-section #post-form-container {
+section#feed-posts #post-form-container {
   width: 50%;
   margin: auto;
   background-color: #303030;
@@ -13,7 +17,7 @@ section #post-form-container {
   margin-top: 10px;
 }
 
-section #post-form-container #new-post-form {
+section#feed-posts #post-form-container #new-post-form {
   margin: auto;
   padding-top: 12px;
   width: fit-content;
@@ -21,7 +25,7 @@ section #post-form-container #new-post-form {
   justify-content: space-around;
 }
 
-section #post-form-container #new-post-form #postContent {
+section#feed-posts #post-form-container #new-post-form #postContent {
   resize: none;
   border-radius: 4px;
   background-color: #4d4d4d;
@@ -29,15 +33,16 @@ section #post-form-container #new-post-form #postContent {
   outline: none;
   border: none;
   width: 90%;
+  margin-left: 5px;
 }
 
-section #post-form-container #new-post-form #postContent:hover {
+section#feed-posts #post-form-container #new-post-form #postContent:hover {
   background-color: #444444;
 }
 
-section #post-form-container #new-post-form #post-button {
+section#feed-posts #post-form-container #new-post-form #post-button {
   height: 40px;
-  margin: 5px 0 0 5px;
+  margin: 5px 5px 0 5px;
   background-color: #2374e1;
   color: white;
   border: none;
@@ -45,44 +50,44 @@ section #post-form-container #new-post-form #post-button {
   width: 10%;
 }
 
-section #post-form-container #new-post-form #post-button:disabled {
+section#feed-posts #post-form-container #new-post-form #post-button:disabled {
   background-color: #898f9c;
   color: #b1b0b0;
 }
 
-section #post-form-container #new-post-form #post-button:disabled:hover {
+section#feed-posts #post-form-container #new-post-form #post-button:disabled:hover {
   background-color: #898f9c;
   color: #b1b0b0;
   cursor: not-allowed;
 }
 
-section #post-form-container #new-post-form #post-button:hover {
+section#feed-posts #post-form-container #new-post-form #post-button:hover {
   background-color: #3d91ff;
   cursor: pointer;
 }
 
-section #post-form-container #new-post-form #postContent::placeholder {
+section#feed-posts #post-form-container #new-post-form #postContent::placeholder {
   color: white;
   opacity: 0.8;
 }
 
-section #post-list-container {
+section#feed-posts #post-list-container {
   margin: auto;
   width: 50%;
 }
 
-section #post-list-container #feed {
+section#feed-posts #post-list-container #feed {
   color: #b1b3b9;
   margin: auto;
   margin-top: 15px;
 }
 
-section #post-list-container ul {
+section#feed-posts #post-list-container ul {
   width: 100%;
   padding: 0;
 }
 
-section #post-list-container ul li {
+section#feed-posts #post-list-container ul li {
   list-style: none;
   background-color: #303030;
   border-radius: 10px;
@@ -92,22 +97,22 @@ section #post-list-container ul li {
   margin-bottom: 5px;
 }
 
-section #post-list-container ul li #delete-post {
+section#feed-posts #post-list-container ul li #delete-post {
   float: right;
 }
 
-section #post-list-container ul li #delete-post a {
+section#feed-posts #post-list-container ul li #delete-post a {
   text-decoration: none;
   color: white;
 }
 
-section #post-list-container ul li hr {
+section#feed-posts #post-list-container ul li hr {
   border-color: #9e9e9e;
   background-color: #9e9e9e;
   color: #9e9e9e;
 }
 
-section #post-list-container ul li .post-comments .post-comments-list ul #comments-list {
+section#feed-posts #post-list-container ul li .post-comments .post-comments-list ul #comments-list {
   background-color: #3a3b3d;
   margin: 10px;
   margin-left: 0;
@@ -117,22 +122,22 @@ section #post-list-container ul li .post-comments .post-comments-list ul #commen
   padding-left: 10px;
 }
 
-section #post-list-container ul li .post-comments .post-comments-list ul #comments-list p {
+section#feed-posts #post-list-container ul li .post-comments .post-comments-list ul #comments-list p {
   display: inline;
 }
 
-section #post-list-container ul li .post-comments .post-comments-list ul #comments-list #delete-comment {
+section#feed-posts #post-list-container ul li .post-comments .post-comments-list ul #comments-list #delete-comment {
   float: right;
   padding-right: 10px;
   padding-top: 2px;
 }
 
-section #post-list-container ul li .post-comments .post-comments-list ul #comments-list #delete-comment a {
+section#feed-posts #post-list-container ul li .post-comments .post-comments-list ul #comments-list #delete-comment a {
   text-decoration: none;
   color: white;
 }
 
-section #post-list-container ul li .post-comments form #comment-input {
+section#feed-posts #post-list-container ul li .post-comments form #comment-input {
   border: none;
   height: 30px;
   width: 70%;
@@ -143,22 +148,44 @@ section #post-list-container ul li .post-comments form #comment-input {
   padding-left: 10px;
 }
 
-section #post-list-container ul li .post-comments form #comment-input::placeholder {
+section#feed-posts #post-list-container ul li .post-comments form #comment-input::placeholder {
   color: white;
   opacity: 0.8;
   padding-left: 2px;
 }
 
-section #post-list-container ul li .post-comments form #comment-input:hover {
+section#feed-posts #post-list-container ul li .post-comments form #comment-input:hover {
   background-color: #444444;
 }
 
-section #post-list-container ul li .user {
+section#feed-posts #post-list-container ul li .user {
   font-size: smaller;
   color: #b1b3b9;
 }
 
-section #post-list-container ul li .userComments {
+section#feed-posts #post-list-container ul li .userComments {
   font-size: 0.8em;
   color: #b1b3b9;
+}
+
+section#user-friends {
+  width: 30%;
+  padding-left: 10px;
+  height: 100vh;
+  color: #b1b3b9;
+}
+
+section#user-friends h4 {
+  font-size: larger;
+  margin: 5px;
+}
+
+section#user-friends p {
+  margin: 10px;
+  font-size: small;
+}
+
+section#user-friends p a {
+  text-decoration: none;
+  color: white;
 }
