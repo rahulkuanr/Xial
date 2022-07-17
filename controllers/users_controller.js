@@ -74,6 +74,7 @@ module.exports.create = (request, response) => {
 
 //sign in and create session for the user
 module.exports.createSession = (request, response) => {
+  request.flash('success', 'Logged In');
   return response.redirect('/');
 };
 
@@ -84,9 +85,10 @@ module.exports.destroySession = (request, response) => {
     (error) => {
       if(error) {
         console.log('Error logging out');
-        return;
       }
     }
   );
+  request.flash('success', 'Logged Out');
+
   return response.redirect('/');
 };
