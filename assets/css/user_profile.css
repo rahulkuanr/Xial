@@ -46,7 +46,8 @@ body div #edit-form {
   display: none;
 }
 
-body div #edit-form form input, body div #edit-form form button {
+body div #edit-form form input,
+body div #edit-form form button {
   display: block;
   margin: 20px;
   border: none;
