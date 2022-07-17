@@ -15,10 +15,12 @@ module.exports.create = async (request, response) => {
             //if comment get created add comment to post
             post.comments.push(comment);
             post.save();
+            request.flash('success', 'Comment added!');
             response.redirect('/');
         }
     } catch(error) {
-        console.log('Error: ', error);
+        request.flash('error', error);
+        return;
     }
 };
 
@@ -31,6 +33,7 @@ module.exports.destroy = async (request, response) => {
         comment.remove();
 
          await Post.findByIdAndUpdate(postId, {$pull: {comments: request.params.id}});
+         request.flash('success', 'Comment deleted');
     }
     return response.redirect('back');
 }

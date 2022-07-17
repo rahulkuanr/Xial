@@ -8,10 +8,11 @@ module.exports.create = async (request, response) => {
             content: request.body.content,
             user: request.user._id
         });
-    
+        request.flash('success', 'Post Published!');
         return response.redirect('back');
     } catch(error) {
-        console.log('Error:', error);
+        request.flash('error', error);
+        return response.redirect('back');
     }
 };
 
@@ -24,9 +25,13 @@ module.exports.destroy = async (request, response) => {
 
             await Comment.deleteMany({post: request.params.id});
         }
+        request.flash('success', 'Post Deleted!');
         return response.redirect('back');
     } catch(error) {
-        console.log('Error: ', error);
+        request.flash('error', error);
+        return response.redirect('back');
+
+
     }
     
 };

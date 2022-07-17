@@ -14,6 +14,7 @@ module.exports.profile = (request, response) => {
 module.exports.update = (request, response) => {
   if(request.user.id == request.params.id) {
     User.findByIdAndUpdate(request.params.id, request.body, (error, user) => {
+      request.flash('success', 'Profile updated succesfully');
       return response.redirect('back');
     });
   } else {
@@ -48,6 +49,7 @@ module.exports.signIn = (request, response) => {
 // get sign up data
 module.exports.create = (request, response) => {
   if (request.body.password != request.body.confirmPassword) {
+    request.flash('error', 'Password didn\'t match');
     return response.redirect("back");
   }
 
@@ -60,13 +62,14 @@ module.exports.create = (request, response) => {
     if (!user) {
       User.create(request.body, (error, user) => {
         if (error) {
-          console.log("Error in creating user");
+          request.flash('error', error);
           return;
         }
-
+        request.flash('success', 'Account created succesfully');
         return response.redirect('/users/sign-in');
       });
     } else {
+        request.flash('error', 'User already exists');
         return response.redirect("back");
     }
   });
